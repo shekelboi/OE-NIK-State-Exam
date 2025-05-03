@@ -1,3 +1,5 @@
+# Categorization of Cloud Topics
+
 ## 1. Cloud Computing & Services
 - Cloud computing basics: definitions, service and deployment models, usage patterns  
 - IaaS solutions: AWS regions and availability zones concepts, AWS EC2 and storage solutions  
