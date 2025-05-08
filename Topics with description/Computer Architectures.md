@@ -1,7 +1,5 @@
 # Computer Architectures
 
----
-
 ## I. Logical Architecture
 
 1. **Data Files & Manipulations**  
@@ -13,8 +11,6 @@
 3. **Instruction Types & State Transitions**  
    - Types of instructions and operands, architectural types, regular architectures, state space and state transitions
 
----
-
 ## II. Classes of Computers and Performance Metrics
 
 4. **Performance Metric & Instruction Set Architecture**  
@@ -22,8 +18,6 @@
 
 5. **Power & Energy**  
    - Power trends, Power Wall, reducing power, dynamic energy and power, static power
-
----
 
 ## III. Classical Microarchitectures (Physical Architecture)
 
@@ -39,8 +33,6 @@
 9. **Interrupt System**  
    - Definition, causes, exceptions, differences between interrupts and exceptions
 
----
-
 ## IV. Memory
 
 10. **Memory Hierarchy & DRAM**  
@@ -51,8 +43,6 @@
 
 12. **Associative & Multilevel Caches**  
     - Associative cache types, direct-mapped vs. fully associative, multilevel cache advantages
-
----
 
 ## V. Modern Microarchitectures (Physical Architecture)
 
@@ -83,7 +73,6 @@
 21. **3rd Gen Superscalar**  
     - Three-operand instructions, SIMD, vector multimedia, VLIW architectures
 
----
 
 ## VI. New Era in Processor Development
 
@@ -92,8 +81,6 @@
 
 23. **Process-Level Parallelism**  
     - Motivation, rating, limits, Amdahl’s law, shared/distributed memory
-
----
 
 ## VII. Intel Core 2 Family
 
@@ -124,8 +111,6 @@
 32. **Cache Architecture Evolution**  
     - L2–L4 levels, per-core/shared, unified/split caches
 
----
-
 ## VIII. AMD Zen Family
 
 33. **Zen Roadmap**  
@@ -145,8 +130,6 @@
 
 38. **Zen Overview**  
     - With/without GPU, packaging, Pro models
-
----
 
 ## IX. Mobile Revolution & ARM CPUs
 
