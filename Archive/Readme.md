@@ -1,0 +1,1 @@
+This directory contains somewhat outdated documents to prepare for the state exam.
