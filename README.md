@@ -1,5 +1,9 @@
 # State Exam
 
+The following documents are for OE-NIK Computer Science and Engineering majors specialized in Cloud Service Technologies and IT Security.
+
+The Topic Summaries directory contains Markdown files that follow the topics of the state exam based on videos collected in the playlists below. Some documents may be deliberately short to avoid redundancy (some topics are overlapping). Others may still need extension. Contributions are welcome.
+
 ## Playlists
 
 * [Networking Topics](https://www.youtube.com/playlist?list=PLt68DSv_XGjm46LNIn1NOyUzNrbRv-GWJ)
