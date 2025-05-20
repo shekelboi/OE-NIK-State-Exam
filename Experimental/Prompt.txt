@@ -1,0 +1,5 @@
+Always send the Markdown code format.
+Always use a format that is easy to remember, use tables, lists, etc. as necessary.
+Do not number headers.
+Do not add summaries.
+Start from ## headers, feel free to add deeper level headers in case of related concepts.

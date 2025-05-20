@@ -4,6 +4,8 @@ The following documents are for OE-NIK Computer Science and Engineering majors s
 
 The Topic Summaries directory contains Markdown files that follow the topics of the state exam based on videos collected in the playlists below. Some documents may be deliberately short to avoid redundancy (some topics are overlapping). Others may still need extension. Contributions are welcome.
 
+The `Experimental` directory contains ChatGPT generated summaries.
+
 ## Playlists
 
 * [Networking Topics](https://www.youtube.com/playlist?list=PLt68DSv_XGjm46LNIn1NOyUzNrbRv-GWJ)
