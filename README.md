@@ -14,11 +14,11 @@ The `Experimental` directory contains ChatGPT generated summaries.
 
 ## Categorized Topic Lists
 
-* [Networking](./Networking%20Topics.md)
-* [Cloud Computing](./Cloud%20Topics.md)
-* [Computer Architectures](./Computer%20Architectures%20Topics.md)
+* [Networking](./Categorized%20Topics/Networking%20Topics.md)
+* [Cloud Computing](./Categorized%20Topics/Cloud%20Topics.md)
+* [Computer Architectures](./Categorized%20Topics/Computer%20Architectures%20Topics.md)
 
 ## Topic Lists With Descriptions
 
-* [Networking And Cloud Computing](./Topics%20With%20Description/Networking%20and%20Cloud%20Computing.md)
-* [Computer Architectures](./Topics%20With%20Description/Computer%20Architectures.md)
+* [Networking And Cloud Computing](./List%20of%20Topics/Networking%20and%20Cloud%20Computing.md)
+* [Computer Architectures](./List%20of%20Topics/Computer%20Architectures.md)
