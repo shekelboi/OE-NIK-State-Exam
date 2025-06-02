@@ -1,0 +1,30 @@
+<h1 id="cache-architecture-evolution">Cache Architecture Evolution</h1>
+<h3 id="l1l4-levels">L1–L4 Levels</h3>
+<ul>
+<li><p>Modern CPUs feature multiple levels of cache:</p>
+<ul>
+<li><strong>L1</strong>: Fastest, smallest, per core.</li>
+<li><strong>L2</strong>: Larger, still fast, often per core.</li>
+<li><strong>L3</strong>: Shared among cores, bigger, slower.</li>
+<li><strong>L4</strong> (in some CPUs): Even larger, used as a buffer
+for memory access (e.g., Intel eDRAM).</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="per-core-shared">Per-Core / Shared</h3>
+<ul>
+<li>L1 and L2 caches are typically <strong>dedicated per core</strong> —
+ensures low latency and avoids contention.</li>
+<li>L3 and L4 are often <strong>shared</strong>, promoting efficient
+inter-core communication and reducing redundancy.</li>
+</ul>
+<hr />
+<h3 id="unified-split-caches">Unified / Split Caches</h3>
+<ul>
+<li><strong>Unified caches</strong> store both data and instructions
+(common in L2, L3).</li>
+<li><strong>Split caches</strong> separate instruction and data caches
+(usually in L1) for faster parallel access.</li>
+<li>Split caches reduce instruction-data interference, speeding up
+processing.</li>
+</ul>

@@ -1,0 +1,40 @@
+<h1 id="rd-gen-superscalar">3rd Gen Superscalar</h1>
+<h3 id="three-operand-instructions">Three-Operand Instructions</h3>
+<ul>
+<li><p>Unlike two-operand formats (where one input is also the output),
+these allow:</p>
+<pre><code>ADD R1, R2, R3  // R1 = R2 + R3</code></pre></li>
+<li><p>This avoids overwriting source registers and improves
+ILP.</p></li>
+</ul>
+<hr />
+<h3 id="simd-single-instruction-multiple-data">SIMD (Single Instruction,
+Multiple Data)</h3>
+<ul>
+<li>Executes the <strong>same instruction on multiple data
+elements</strong> in parallel.</li>
+<li>Great for multimedia and vector processing (e.g., graphics, video,
+audio).</li>
+<li>Uses <strong>vector registers</strong> and <strong>vector
+instructions</strong>.</li>
+</ul>
+<hr />
+<h3 id="vector-multimedia-instructions">Vector Multimedia
+Instructions</h3>
+<ul>
+<li>Specialized SIMD instructions for multimedia workloads (e.g., MMX,
+SSE, AVX).</li>
+<li>Accelerates tasks like image processing, physics in games, and AI
+operations.</li>
+</ul>
+<hr />
+<h3 id="vliw-very-long-instruction-word">VLIW (Very Long Instruction
+Word)</h3>
+<ul>
+<li>Packs <strong>multiple operations into one long instruction</strong>
+issued together.</li>
+<li>Parallelism is handled by the <strong>compiler</strong>, not the
+CPU.</li>
+<li>Pros: simpler hardware; Cons: harder to optimize for all
+workloads.</li>
+</ul>

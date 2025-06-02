@@ -1,0 +1,45 @@
+<h1 id="sequential-consistency">Sequential Consistency</h1>
+<h3 id="what-does-it-mean">What Does It Mean?</h3>
+<p>Sequential consistency ensures that the results of execution are
+<strong>as if all instructions were executed in program order</strong>,
+across all cores or threads. Even if actual execution is out of order
+(for performance), it must appear ordered.</p>
+<hr />
+<h3 id="instruction-and-memory-order"><strong>Instruction and Memory
+Order</strong></h3>
+<ul>
+<li>All processors execute instructions in a way that seems
+<strong>interleaved</strong>,</li>
+<li>But <strong>each processor’s own instructions stay in
+order</strong>.</li>
+<li>No processor sees memory effects from another out of the expected
+order.</li>
+</ul>
+<hr />
+<h3 id="interrupt-consistency"><strong>Interrupt
+Consistency</strong></h3>
+<p>If an interrupt occurs:</p>
+<ul>
+<li>It must appear <strong>after all previous instructions</strong> in
+that core have completed.</li>
+<li>This ensures a <strong>predictable system state</strong> when
+handling exceptions or events.</li>
+</ul>
+<hr />
+<h3 id="reorder-buffer-rob"><strong>Reorder Buffer (ROB)</strong></h3>
+<p>A ROB tracks and holds instructions that:</p>
+<ul>
+<li>Execute <strong>out of order</strong>, but</li>
+<li><strong>Commit results in order</strong> to memory and
+registers.</li>
+</ul>
+<p>This makes execution faster but preserves consistency.</p>
+<hr />
+<h3 id="reservation-stations"><strong>Reservation Stations</strong></h3>
+<ul>
+<li>Hold instructions waiting for operands.</li>
+<li>Instructions <strong>wake up</strong> when data becomes available
+(e.g., from another unit).</li>
+<li>Allows more <strong>parallelism</strong> without breaking program
+order at commit time.</li>
+</ul>

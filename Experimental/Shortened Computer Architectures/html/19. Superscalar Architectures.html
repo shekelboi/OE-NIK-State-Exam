@@ -1,0 +1,57 @@
+<h1 id="superscalar-architectures">Superscalar Architectures</h1>
+<h3 id="what-is-superscalar">What Is Superscalar?</h3>
+<p>A <strong>superscalar architecture</strong> is designed to execute
+<strong>multiple instructions simultaneously</strong> during each clock
+cycle. It achieves this by having several functional units (like ALUs,
+multipliers) that work in parallel.</p>
+<hr />
+<h3 id="instruction-level-parallelism-ilp">Instruction-Level Parallelism
+(ILP)</h3>
+<ul>
+<li>ILP allows the CPU to identify independent instructions that can run
+at the same time.</li>
+<li>The processor dynamically schedules and issues multiple instructions
+per cycle.</li>
+<li>This boosts performance by utilizing CPU resources efficiently.</li>
+</ul>
+<hr />
+<h3 id="harvard-architecture">Harvard Architecture</h3>
+<ul>
+<li>Superscalar CPUs often use a <strong>Harvard architecture</strong>,
+separating instruction and data memory.</li>
+<li>This separation allows <strong>simultaneous fetching</strong> of
+instructions and reading/writing data, reducing memory access
+conflicts.</li>
+</ul>
+<hr />
+<h3 id="cisc-vs.-risc">CISC vs. RISC</h3>
+<ul>
+<li><p><strong>CISC (Complex Instruction Set Computing):</strong></p>
+<ul>
+<li>Instructions can perform complex tasks in one instruction
+(multi-step internally).</li>
+<li>Example: x86 architecture.</li>
+<li>Pros: fewer instructions per program.</li>
+<li>Cons: harder to pipeline and parallelize.</li>
+</ul></li>
+<li><p><strong>RISC (Reduced Instruction Set Computing):</strong></p>
+<ul>
+<li>Simpler, fixed-length instructions.</li>
+<li>Designed for pipelining and parallelism.</li>
+<li>Example: ARM processors.</li>
+<li>Pros: faster instruction throughput, easier to optimize for
+superscalar.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="branch-prediction-in-superscalar-cpus">Branch Prediction in
+Superscalar CPUs</h3>
+<ul>
+<li>Branch instructions cause uncertainty in instruction flow.</li>
+<li>Superscalar CPUs use <strong>branch prediction</strong> to guess
+which way a branch will go to keep pipelines full.</li>
+<li>Techniques include <strong>static</strong> (fixed rules) and
+<strong>dynamic</strong> (based on runtime history) prediction.</li>
+<li>Good branch prediction is crucial to maintain high ILP and avoid
+pipeline stalls.</li>
+</ul>

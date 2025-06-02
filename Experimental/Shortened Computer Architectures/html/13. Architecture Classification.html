@@ -1,0 +1,30 @@
+<h1 id="architecture-classification">Architecture Classification</h1>
+<h3 id="flynns-taxonomy"><strong>Flynn’s Taxonomy</strong></h3>
+<p>A classic way to categorize computer architectures based on
+<strong>instruction and data streams</strong>:</p>
+<ul>
+<li><p><strong>SISD</strong> – <em>Single Instruction, Single Data</em>
+Traditional sequential processors (like classic CPUs).</p></li>
+<li><p><strong>SIMD</strong> – <em>Single Instruction, Multiple
+Data</em> One instruction acts on many data points. Used in vector
+processing and multimedia (e.g., GPUs, SSE/AVX).</p></li>
+<li><p><strong>MISD</strong> – <em>Multiple Instruction, Single
+Data</em> Rare or theoretical. Multiple processors perform different
+operations on the same data.</p></li>
+<li><p><strong>MIMD</strong> – <em>Multiple Instruction, Multiple
+Data</em> Common in multicore/multiprocessor systems. Each core runs its
+own instruction stream on different data.</p></li>
+</ul>
+<hr />
+<h3 id="modern-classifications"><strong>Modern
+Classifications</strong></h3>
+<p>Newer systems can blur these lines, so we also see terms like:</p>
+<ul>
+<li><strong>Superscalar</strong> – Executes multiple instructions per
+cycle from a single thread.</li>
+<li><strong>VLIW (Very Long Instruction Word)</strong> – Groups several
+operations into one wide instruction.</li>
+<li><strong>SIMT (Single Instruction, Multiple Threads)</strong> – Like
+SIMD, but each thread can follow its own control flow (common in
+GPUs).</li>
+</ul>

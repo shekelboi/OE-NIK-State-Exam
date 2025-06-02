@@ -1,0 +1,37 @@
+<h1 id="parallel-instruction-execution">Parallel Instruction
+Execution</h1>
+<h3 id="what-is-it">What Is It?</h3>
+<p>Parallel instruction execution is about running multiple instructions
+at the same time to speed up processing. Instead of waiting for one
+instruction to finish before starting the next, CPUs try to overlap
+them.</p>
+<hr />
+<h3 id="prefetching-and-instruction-overlap">Prefetching and Instruction
+Overlap</h3>
+<ul>
+<li><strong>Prefetching</strong> means fetching instructions ahead of
+time before the CPU actually needs them.</li>
+<li><strong>Instruction overlap</strong> happens when multiple
+instructions are in different stages of execution simultaneously.</li>
+</ul>
+<hr />
+<h3 id="pipelining">Pipelining</h3>
+<ul>
+<li>The CPU breaks instruction execution into stages (fetch, decode,
+execute, memory access, write-back).</li>
+<li>Each stage works on a different instruction every clock cycle.</li>
+<li>This increases throughput but can have bottlenecks.</li>
+</ul>
+<hr />
+<h3 id="bottlenecks-and-mitigation">Bottlenecks and Mitigation</h3>
+<ul>
+<li><p>Bottlenecks occur when instructions depend on results not yet
+ready (data hazards) or when control flow changes (branch
+hazards).</p></li>
+<li><p>Techniques to reduce bottlenecks:</p>
+<ul>
+<li>Out-of-order execution</li>
+<li>Branch prediction</li>
+<li>Speculative execution</li>
+</ul></li>
+</ul>

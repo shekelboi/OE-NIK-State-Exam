@@ -1,0 +1,39 @@
+<h1 id="control-unit">Control Unit</h1>
+<h3 id="what-is-the-control-unit-cu">What is the Control Unit (CU)?</h3>
+<p>The Control Unit is the <strong>brain inside the CPU</strong> that
+directs the operation of the processor. It tells other parts what to do,
+when, and how.</p>
+<hr />
+<h3 id="hard-wired-control-unit">Hard-Wired Control Unit</h3>
+<ul>
+<li>Implements control logic using <strong>fixed combinational
+circuits</strong> (gates, flip-flops).</li>
+<li>Fast and efficient but <strong>not flexible</strong> — changing
+behavior requires redesigning hardware.</li>
+</ul>
+<hr />
+<h3 id="what-the-cu-controls">What the CU Controls</h3>
+<ul>
+<li><strong>Instruction fetch and decode</strong></li>
+<li><strong>Generating control signals</strong> for ALU, registers,
+memory access</li>
+<li><strong>Managing sequencing</strong> of multi-step instructions</li>
+<li><strong>Handling interrupts and exceptions</strong></li>
+</ul>
+<hr />
+<h3 id="how-it-works">How it Works</h3>
+<ul>
+<li>Decodes instruction opcode into control signals.</li>
+<li>Coordinates data paths to execute instructions step-by-step.</li>
+<li>Often modeled as a <strong>finite state machine (FSM)</strong>
+cycling through states like fetch, decode, execute.</li>
+</ul>
+<hr />
+<h3 id="hardwired-cu-vs-microprogrammed-cu-brief-mention">Hardwired CU
+vs Microprogrammed CU (brief mention)</h3>
+<ul>
+<li><strong>Hardwired:</strong> fast, hardware fixed control
+signals.</li>
+<li><strong>Microprogrammed:</strong> uses a control memory with
+microinstructions for flexibility (covered later).</li>
+</ul>

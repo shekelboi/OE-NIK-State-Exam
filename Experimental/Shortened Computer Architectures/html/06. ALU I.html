@@ -1,0 +1,43 @@
+<h1 id="alu-i">ALU I</h1>
+<h3 id="what-is-the-alu">What Is the ALU?</h3>
+<p>The <strong>Arithmetic Logic Unit (ALU)</strong> is the part of the
+CPU that performs <strong>math and logic operations</strong>—like
+addition, subtraction, comparisons, AND, OR, etc.</p>
+<p>It works with <strong>registers</strong> and connects to the CPU’s
+<strong>data path</strong>, forming the core of instruction
+execution.</p>
+<hr />
+<h3 id="components-of-the-alu">Components of the ALU</h3>
+<ol type="1">
+<li><strong>Inputs:</strong> Usually two operands from registers.</li>
+<li><strong>Operation Selector:</strong> Chooses the operation (add,
+sub, etc.).</li>
+<li><strong>Output:</strong> Result goes to a register or memory.</li>
+<li><strong>Flags:</strong> Sets status bits like Zero, Negative, Carry,
+Overflow.</li>
+</ol>
+<hr />
+<h3 id="single-bit-adder">Single-Bit Adder</h3>
+<p>A simple logic circuit that adds <strong>two 1-bit values</strong>
+and a <strong>carry-in</strong>, producing:</p>
+<ul>
+<li><strong>Sum</strong></li>
+<li><strong>Carry-out</strong></li>
+</ul>
+<p>Basic unit for building larger adders.</p>
+<hr />
+<h3 id="n-bit-adders">n-Bit Adders</h3>
+<p>Built by chaining single-bit adders together:</p>
+<ul>
+<li><p><strong>Sequential (Ripple Carry) Adder:</strong> Each bit waits
+for the carry from the previous one → <strong>slow</strong> for large
+numbers.</p></li>
+<li><p><strong>Parallel (Carry Lookahead) Adder:</strong> Computes
+carries in advance → <strong>much faster</strong>.</p></li>
+</ul>
+<hr />
+<h3 id="adder-with-carry">Adder with Carry</h3>
+<p>Useful when doing <strong>multi-word addition</strong> (e.g., adding
+two 64-bit numbers in 32-bit chunks).</p>
+<p>The carry-out from one addition becomes the carry-in for the
+next.</p>

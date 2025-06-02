@@ -1,0 +1,44 @@
+<h1 id="power-energy">Power &amp; Energy</h1>
+<h3 id="power-trends-in-cpus">Power Trends in CPUs</h3>
+<ul>
+<li>As CPUs get faster and more complex, <strong>power consumption
+increases</strong> dramatically.</li>
+<li>This rise leads to the <strong>“Power Wall”</strong>, where cooling
+and battery life limit performance improvements.</li>
+<li>Power limits restrict clock speed scaling and chip complexity.</li>
+</ul>
+<h3 id="reducing-power-consumption">Reducing Power Consumption</h3>
+<p>Techniques to reduce power:</p>
+<ul>
+<li><strong>Dynamic power reduction:</strong> Lowering voltage and clock
+frequency during less demanding tasks.</li>
+<li><strong>Clock gating:</strong> Turning off the clock signal to idle
+parts of the processor.</li>
+<li><strong>Power gating:</strong> Completely shutting off power to
+unused blocks.</li>
+<li><strong>Multi-core designs:</strong> Use multiple lower-power cores
+instead of one high-power core.</li>
+</ul>
+<h3 id="dynamic-energy-and-power">Dynamic Energy and Power</h3>
+<ul>
+<li><p><strong>Dynamic power</strong> is mainly due to switching
+activity — charging and discharging capacitors in circuits.</p></li>
+<li><p>Formula: <span
+class="math inline"><em>P</em><sub><em>d</em><em>y</em><em>n</em><em>a</em><em>m</em><em>i</em><em>c</em></sub> = <em>C</em> × <em>V</em><sup>2</sup> × <em>f</em> × <em>α</em></span>
+where:</p>
+<ul>
+<li><span class="math inline"><em>C</em></span> = capacitance</li>
+<li><span class="math inline"><em>V</em></span> = voltage</li>
+<li><span class="math inline"><em>f</em></span> = frequency</li>
+<li><span class="math inline"><em>α</em></span> = activity factor (how
+often gates switch)</li>
+</ul></li>
+</ul>
+<h3 id="static-power">Static Power</h3>
+<ul>
+<li>Caused by <strong>leakage currents</strong> even when transistors
+are idle.</li>
+<li>Becomes significant with smaller transistor sizes (deep submicron
+technologies).</li>
+<li>Harder to reduce than dynamic power.</li>
+</ul>

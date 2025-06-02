@@ -1,0 +1,43 @@
+<h1 id="instruction-fetch-branch-prediction">Instruction Fetch &amp;
+Branch Prediction</h1>
+<h3 id="instruction-fetch">Instruction Fetch</h3>
+<ul>
+<li>The <strong>Instruction Fetch Unit</strong> is responsible for
+pulling instructions from memory.</li>
+<li>In superscalar CPUs, it must <strong>fetch multiple instructions per
+cycle</strong> to keep parallel pipelines filled.</li>
+<li>Fetching is more complex due to <strong>variable-length
+instructions</strong> (like in x86) and branch instructions.</li>
+</ul>
+<hr />
+<h3 id="branch-prediction">Branch Prediction</h3>
+<p>To avoid stalling pipelines when a <strong>branch</strong> (like
+<code>if</code> or <code>loop</code>) occurs, CPUs
+<strong>guess</strong> the outcome ahead of time.</p>
+<h4 id="local-prediction">Local Prediction</h4>
+<ul>
+<li>Uses the <strong>history of a single branch</strong>.</li>
+<li>Example: “This branch was taken the last 3 times, so probably will
+be again.”</li>
+</ul>
+<h4 id="correlating-predictor">Correlating Predictor</h4>
+<ul>
+<li>Also called <strong>two-level</strong> or <strong>global
+predictors</strong>.</li>
+<li>Uses <strong>history of multiple branches</strong> to make
+predictions.</li>
+</ul>
+<h4 id="tournament-predictor">Tournament Predictor</h4>
+<ul>
+<li>Combines several predictors and <strong>chooses the best</strong>
+based on recent accuracy.</li>
+<li>Adapts to different branch behaviors.</li>
+</ul>
+<hr />
+<h3 id="branch-target-prediction">Branch Target Prediction</h3>
+<ul>
+<li>Predicts not just <strong>whether</strong> to branch, but
+<strong>where to jump</strong>.</li>
+<li>Uses a <strong>Branch Target Buffer (BTB)</strong> to store likely
+destinations.</li>
+</ul>

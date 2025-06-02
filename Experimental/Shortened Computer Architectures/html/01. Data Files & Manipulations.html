@@ -1,0 +1,65 @@
+<h1 id="data-files-manipulations">Data Files &amp; Manipulations</h1>
+<h3 id="core-concepts">Core Concepts</h3>
+<h4 id="logical-vs.-physical-memory"><strong>Logical vs. Physical
+Memory</strong></h4>
+<ul>
+<li><p><strong>Logical memory</strong> (aka <em>virtual memory</em>):
+The address space your program thinks it has.</p>
+<ul>
+<li>Managed by the OS.</li>
+<li>Gives the illusion of a large, continuous memory.</li>
+</ul></li>
+<li><p><strong>Physical memory</strong>: Actual RAM hardware.</p>
+<ul>
+<li>Smaller and limited.</li>
+<li>Mapped from logical memory via page tables.</li>
+</ul></li>
+</ul>
+<h4 id="registers-vs.-memory"><strong>Registers vs. Memory</strong></h4>
+<ul>
+<li><p><strong>Registers</strong>: Tiny, ultra-fast memory inside the
+CPU.</p>
+<ul>
+<li>Used for current operations.</li>
+<li>Limited in number (e.g., 16–32 general-purpose).</li>
+</ul></li>
+<li><p><strong>Main memory (RAM)</strong>: Much slower but larger.</p>
+<ul>
+<li>Used for storing larger data sets and program state.</li>
+</ul></li>
+</ul>
+<h4 id="addressing-modes"><strong>Addressing Modes</strong></h4>
+<p>Tell the CPU how to interpret the operand in an instruction.</p>
+<ul>
+<li><p><strong>Immediate</strong>: Value is given directly.</p>
+<ul>
+<li><code>MOV R1, #5</code> → Move value 5 into register R1</li>
+</ul></li>
+<li><p><strong>Direct</strong>: Address points straight to the
+value.</p>
+<ul>
+<li><code>MOV R1, [1000]</code> → Move value at address 1000 to R1</li>
+</ul></li>
+<li><p><strong>Register</strong>: Operand is in a register.</p>
+<ul>
+<li><code>ADD R1, R2</code></li>
+</ul></li>
+<li><p><strong>Indirect</strong>: Register holds the address.</p>
+<ul>
+<li><code>MOV R1, [R2]</code></li>
+</ul></li>
+<li><p><strong>Indexed</strong>: Combines a base address + index.</p>
+<ul>
+<li><code>MOV R1, [R2 + R3]</code></li>
+<li>Often used in arrays or loops.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="example-indexed-addressing-in-context">Example: Indexed
+Addressing in Context</h3>
+<p>If you have an array of integers and want to access element 5:</p>
+<ul>
+<li>Base register holds the address of the start of the array.</li>
+<li>Index register holds the offset (5 × element size).</li>
+<li>CPU adds base + index → final memory address.</li>
+</ul>

@@ -1,0 +1,53 @@
+<h1 id="control-dependencies">Control Dependencies</h1>
+<h3 id="what-are-control-dependencies"><strong>What Are Control
+Dependencies?</strong></h3>
+<p>Control dependencies occur when the execution of certain instructions
+depends on the outcome of a previous branch or jump instruction. In
+other words, whether or not an instruction executes depends on a
+decision made during runtime. This is common with conditional branches
+where the CPU must decide which path of the program to follow next.</p>
+<hr />
+<h3 id="why-they-are-important"><strong>Why They Are
+Important</strong></h3>
+<p>Branches and jumps interrupt the smooth, sequential flow of
+instructions in a pipeline. Since the CPU doesn’t know the outcome of a
+branch until it is evaluated, it must either wait (stall) or guess the
+path. Waiting reduces performance, but guessing incorrectly means the
+CPU has to discard work it has already started, which wastes cycles and
+energy.</p>
+<hr />
+<h3 id="types-of-branches"><strong>Types of Branches</strong></h3>
+<ul>
+<li><p><strong>Conditional Branches</strong>: These depend on a
+condition (e.g., a comparison between registers). For example, a branch
+that only executes if two values are equal (<code>BEQ</code>). The CPU
+must evaluate the condition before continuing, which can cause
+delays.</p></li>
+<li><p><strong>Unconditional Branches</strong>: These always cause a
+jump to another instruction location, redirecting program flow without
+any condition.</p></li>
+</ul>
+<hr />
+<h3 id="branch-prediction-techniques"><strong>Branch Prediction
+Techniques</strong></h3>
+<p>To mitigate the delays caused by control dependencies, CPUs use
+branch prediction:</p>
+<ul>
+<li><p><strong>Static Prediction</strong>: Assumes branches will always
+be taken or not taken based on simple rules. For example, always
+assuming backward loops are taken.</p></li>
+<li><p><strong>Dynamic Prediction</strong>: Uses runtime information and
+history to make smarter guesses about branch outcomes. This includes
+techniques like local and global branch predictors that keep track of
+past behavior to predict future branches.</p></li>
+<li><p><strong>Speculative Execution</strong>: The CPU guesses the
+branch outcome and continues executing instructions along that predicted
+path before the actual branch result is known. If the guess is right,
+the CPU saves time; if wrong, it must discard the speculative work and
+recover.</p></li>
+</ul>
+<hr />
+<p>Control dependencies are a key challenge for modern CPUs because
+incorrect predictions cause pipeline flushes, leading to lost
+performance. Advances in prediction accuracy have been crucial to
+improving processor speed.</p>

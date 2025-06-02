@@ -1,0 +1,39 @@
+<h1 id="in-package-integration">In-Package Integration</h1>
+<h3 id="mcms-multi-chip-modules">MCMs (Multi-Chip Modules)</h3>
+<ul>
+<li>Instead of one big monolithic die, AMD uses <strong>multiple smaller
+dies</strong> in a single package.</li>
+<li>These are easier and cheaper to manufacture — better
+<strong>yield</strong> and <strong>scalability</strong>.</li>
+<li>Example: Ryzen, Threadripper, and Epyc all use MCM design.</li>
+</ul>
+<hr />
+<h3 id="homogeneous-vs.-heterogeneous-dies">Homogeneous
+vs. Heterogeneous Dies</h3>
+<ul>
+<li><strong>Homogeneous:</strong> All dies are the same type — e.g., all
+CPU cores.</li>
+<li><strong>Heterogeneous:</strong> Mix of different dies — CPU + GPU,
+or CPU + IO.</li>
+<li>AMD uses both depending on the product (e.g., Ryzen vs. APU).</li>
+</ul>
+<hr />
+<h3 id="horizontal-vertical-integration">Horizontal &amp; Vertical
+Integration</h3>
+<ul>
+<li><strong>Horizontal:</strong> Linking dies side-by-side (e.g.,
+multiple CPU dies).</li>
+<li><strong>Vertical:</strong> Integration of different functions —
+logic + memory, or stacking layers (3D V-Cache, for example).</li>
+<li>This improves <strong>density</strong> and <strong>performance per
+watt</strong>.</li>
+</ul>
+<hr />
+<h3 id="power-limits">Power Limits</h3>
+<ul>
+<li>Managing multiple dies in one package needs tight <strong>power
+coordination</strong>.</li>
+<li>Features like <strong>Power Cap</strong> ensure system stays within
+thermal and power envelopes.</li>
+<li>Essential for high-core-count CPUs like Epyc.</li>
+</ul>

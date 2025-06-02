@@ -1,0 +1,46 @@
+<h1 id="instruction-types-state-transitions">Instruction Types &amp;
+State Transitions</h1>
+<h3 id="instruction-types-operands">Instruction Types &amp;
+Operands</h3>
+<ul>
+<li><p><strong>Instruction Types:</strong></p>
+<ul>
+<li><strong>Arithmetic/Logic:</strong> ADD, SUB, AND, OR</li>
+<li><strong>Data Movement:</strong> LOAD, STORE, MOVE</li>
+<li><strong>Control Flow:</strong> JUMP, BRANCH, CALL, RETURN</li>
+<li><strong>Special:</strong> System calls, interrupts</li>
+</ul></li>
+<li><p><strong>Operands:</strong></p>
+<ul>
+<li><strong>Registers:</strong> Fast, inside CPU</li>
+<li><strong>Memory:</strong> Slower, main memory</li>
+<li><strong>Immediate:</strong> Constant values embedded in
+instructions</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="architectural-types">Architectural Types</h3>
+<ul>
+<li><p><strong>CISC (Complex Instruction Set Computer):</strong>
+Instructions can do complex tasks, varying lengths, multiple cycles.
+Examples: x86.</p></li>
+<li><p><strong>RISC (Reduced Instruction Set Computer):</strong>
+Simplified, fixed-length instructions, executed in a single cycle,
+load/store architecture. Examples: ARM.</p></li>
+<li><p><strong>Regular architectures:</strong> Architectures designed so
+instruction formats and operations follow predictable patterns, making
+decoding easier.</p></li>
+</ul>
+<hr />
+<h3 id="state-space-state-transitions">State Space &amp; State
+Transitions</h3>
+<ul>
+<li><p>The CPU has a set of internal states (e.g., Fetch, Decode,
+Execute, Memory Access, Write Back).</p></li>
+<li><p><strong>State space</strong> is the collection of all possible
+states the CPU can be in during instruction processing.</p></li>
+<li><p><strong>State transitions</strong> are how the CPU moves from one
+state to another in a sequence to complete each instruction.</p></li>
+<li><p>This formal model helps design control units and verify
+correctness.</p></li>
+</ul>

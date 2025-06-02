@@ -1,0 +1,60 @@
+<h1 id="data-dependencies">Data Dependencies</h1>
+<h3 id="what-are-they"><strong>What Are They?</strong></h3>
+<p>In a pipeline or parallel execution environment, <strong>data
+dependencies</strong> determine whether instructions can execute
+independently or must wait on each other.</p>
+<hr />
+<h3 id="types-of-data-dependencies"><strong>Types of Data
+Dependencies</strong></h3>
+<ol type="1">
+<li><p><strong>RAW (Read After Write)</strong> — <em>True
+Dependency</em><br> An instruction needs a value that hasn’t been
+computed yet.</p>
+<pre><code>ADD R1, R2, R3
+SUB R4, R1, R5   ; must wait for ADD</code></pre></li>
+<li><p><strong>WAR (Write After Read)</strong> —
+<em>Anti-Dependency</em><br> A write might overwrite a value that needs
+to be read first.</p>
+<pre><code>READ R1
+WRITE R1         ; must wait for read to finish</code></pre></li>
+<li><p><strong>WAW (Write After Write)</strong> — <em>Output
+Dependency</em><br> Two instructions write to the same register — must
+preserve the order.</p>
+<pre><code>WRITE R1
+WRITE R1         ; later write must go last</code></pre></li>
+</ol>
+<hr />
+<h3 id="why-do-they-matter"><strong>Why Do They Matter?</strong></h3>
+<ul>
+<li><strong>Hazards</strong> in the pipeline stall execution.</li>
+<li><strong>Out-of-order execution</strong> and <strong>register
+renaming</strong> are used to hide or resolve them.</li>
+<li>Instruction-level parallelism (ILP) depends heavily on minimizing
+these dependencies.</li>
+</ul>
+<hr />
+<h3 id="register-renaming"><strong>Register Renaming</strong></h3>
+<p>Registers are limited and reused in programs, which can cause false
+dependencies (especially WAR and WAW).</p>
+<p><strong>Register renaming</strong> solves this by:</p>
+<ul>
+<li>Mapping architectural registers (the ones programmers see) to a
+larger pool of <strong>physical registers</strong>.</li>
+<li>This way, two instructions writing to the same architectural
+register can use different physical registers, removing false
+dependencies.</li>
+<li>Result: better instruction-level parallelism because the CPU sees
+them as independent.</li>
+</ul>
+<hr />
+<h3 id="out-of-order-execution"><strong>Out-of-Order
+Execution</strong></h3>
+<p>Normally, instructions execute in program order, but this can cause
+stalls due to dependencies or resource waits.</p>
+<p>Out-of-order execution lets the CPU:</p>
+<ul>
+<li><strong>Execute instructions as soon as their operands are
+ready</strong>, even if earlier instructions are still waiting.</li>
+<li>Uses buffers and reorder mechanisms to keep results consistent.</li>
+<li>Improves CPU utilization and performance by reducing idle time.</li>
+</ul>

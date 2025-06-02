@@ -1,0 +1,32 @@
+<h1 id="pipeline-based-execution">Pipeline-Based Execution</h1>
+<h3 id="pipeline-basics">Pipeline Basics</h3>
+<ul>
+<li>A pipeline breaks down instruction execution into several
+<strong>stages</strong> (fetch, decode, execute, memory access,
+write-back).</li>
+<li>Each stage performs part of the work for an instruction.</li>
+<li>At every clock cycle, a new instruction enters the pipeline, while
+others advance to the next stage.</li>
+<li>This creates a <strong>continuous flow</strong> improving
+instruction throughput.</li>
+</ul>
+<hr />
+<h3 id="logical-vs.-physical-pipeline">Logical vs. Physical
+Pipeline</h3>
+<ul>
+<li><strong>Logical pipeline:</strong> Conceptual division of execution
+steps.</li>
+<li><strong>Physical pipeline:</strong> Actual hardware units
+implementing these stages.</li>
+</ul>
+<p>Sometimes, stages are combined or split depending on the CPU
+design.</p>
+<hr />
+<h3 id="pipeline-characteristics">Pipeline Characteristics</h3>
+<ul>
+<li>Ideal pipelines process one instruction per clock cycle once
+filled.</li>
+<li>Real pipelines face stalls or hazards, causing delays.</li>
+<li>Pipeline depth (number of stages) affects latency and
+throughput.</li>
+</ul>

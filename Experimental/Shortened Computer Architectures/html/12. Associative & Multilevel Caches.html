@@ -1,0 +1,40 @@
+<h1 id="associative-multilevel-caches">Associative &amp; Multilevel
+Caches</h1>
+<h3 id="associative-cache-types"><strong>Associative Cache
+Types</strong></h3>
+<ul>
+<li><p><strong>Direct-Mapped Cache</strong><br> Each memory block maps
+to exactly <strong>one cache line</strong>. Simple and fast, but prone
+to collisions (conflicts).</p></li>
+<li><p><strong>Fully Associative Cache</strong><br> A memory block can
+be stored in <strong>any cache line</strong>. Flexible, fewer conflicts,
+but slower and more complex.</p></li>
+<li><p><strong>Set-Associative Cache</strong><br> A middle ground. Cache
+is divided into sets; a block maps to one set but can occupy any line
+within that set (e.g., 4-way associative means 4 lines per
+set).</p></li>
+</ul>
+<hr />
+<h3 id="advantages-of-associativity"><strong>Advantages of
+Associativity</strong></h3>
+<ul>
+<li>Higher associativity generally <strong>reduces conflict
+misses</strong>.</li>
+<li>But it <strong>increases complexity</strong> and access time due to
+searching multiple lines.</li>
+</ul>
+<hr />
+<h3 id="multilevel-caches"><strong>Multilevel Caches</strong></h3>
+<ul>
+<li><p>To balance speed, size, and cost, modern CPUs use multiple cache
+levels:</p>
+<ul>
+<li><strong>L1 Cache:</strong> Smallest, fastest, closest to the CPU
+core.</li>
+<li><strong>L2 Cache:</strong> Larger, slightly slower.</li>
+<li><strong>L3 Cache:</strong> Shared among cores, larger and slower
+than L2.</li>
+</ul></li>
+<li><p>This hierarchy improves average access time by catching data
+sooner at faster caches.</p></li>
+</ul>

@@ -1,0 +1,48 @@
+<h1 id="thread-level-parallelism-tlp">Thread-Level Parallelism
+(TLP)</h1>
+<h3 id="why-tlp">Why TLP?</h3>
+<ul>
+<li>As <strong>single-core CPUs hit performance limits</strong> (power,
+heat, clock speed), adding more <strong>cores</strong> became the
+solution.</li>
+<li>TLP improves performance by running <strong>multiple
+threads</strong> in parallel across cores or hardware threads.</li>
+</ul>
+<hr />
+<h3 id="single-core-limitations">Single-Core Limitations</h3>
+<ul>
+<li>You can only do so much in one thread: limited ILP, pipeline depth,
+and frequency scaling.</li>
+<li><strong>Diminishing returns</strong> from superscalar tricks → need
+to go multithreaded.</li>
+</ul>
+<hr />
+<h3 id="forms-of-multithreading">Forms of Multithreading</h3>
+<ol type="1">
+<li><p><strong>Coarse-Grain Multithreading:</strong></p>
+<ul>
+<li>Switches threads only on big stalls (e.g., cache miss).</li>
+<li>Simple, but less responsive.</li>
+</ul></li>
+<li><p><strong>Fine-Grain Multithreading:</strong></p>
+<ul>
+<li>Switches every cycle, interleaves instructions from multiple
+threads.</li>
+<li>Hides latency better, but more complex.</li>
+</ul></li>
+<li><p><strong>Simultaneous Multithreading (SMT):</strong></p>
+<ul>
+<li>Runs <strong>multiple threads in parallel</strong> using the same
+core and functional units.</li>
+<li>Example: Intel Hyper-Threading.</li>
+</ul></li>
+</ol>
+<hr />
+<h3 id="smt-vs.-single-threaded-execution">SMT vs. Single-Threaded
+Execution</h3>
+<ul>
+<li><strong>SMT increases utilization</strong> of execution units by
+filling idle slots with instructions from other threads.</li>
+<li>Can <strong>improve throughput</strong>, but not always per-thread
+speed.</li>
+</ul>

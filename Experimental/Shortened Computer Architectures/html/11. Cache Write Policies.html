@@ -1,0 +1,71 @@
+<h1 id="cache-write-policies">Cache Write Policies</h1>
+<h3 id="write-through"><strong>Write-Through</strong></h3>
+<ul>
+<li>Every write updates <strong>both cache and main memory</strong></li>
+<li>Easy to implement, but creates <strong>high memory
+traffic</strong></li>
+<li>Memory always reflects the latest data</li>
+</ul>
+<hr />
+<h3 id="write-back"><strong>Write-Back</strong></h3>
+<ul>
+<li>Writes update <strong>only the cache</strong> initially</li>
+<li>Main memory is updated <strong>later</strong>, when the block is
+evicted</li>
+<li>Needs a <strong>dirty bit</strong> to track changes</li>
+<li>Reduces memory traffic, but more complex</li>
+</ul>
+<hr />
+<h3 id="write-allocation"><strong>Write Allocation</strong></h3>
+<ul>
+<li>On a <strong>write miss</strong>, <strong>fetch the block</strong>
+into the cache, then write</li>
+<li>Assumes future writes to the same block</li>
+<li>Common with <strong>write-back</strong></li>
+</ul>
+<hr />
+<h3 id="write-around"><strong>Write-Around</strong></h3>
+<ul>
+<li>On a <strong>write miss</strong>, write directly to <strong>main
+memory</strong></li>
+<li><strong>Skip loading</strong> into the cache</li>
+<li>Keeps cache clean, but each miss is costly</li>
+</ul>
+<hr />
+<h3 id="summary-table"><strong>Summary Table</strong></h3>
+<table>
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 25%" />
+<col style="width: 32%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Policy</th>
+<th>On Write Hit</th>
+<th>On Write Miss</th>
+<th>Memory Traffic</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Write-Through</td>
+<td>Update both</td>
+<td>Update both</td>
+<td>High</td>
+</tr>
+<tr class="even">
+<td>Write-Back</td>
+<td>Update cache only</td>
+<td>Load block, write cache</td>
+<td>Low (if reused)</td>
+</tr>
+<tr class="odd">
+<td>Write-Around</td>
+<td>Write to memory</td>
+<td>Write to memory only</td>
+<td>Medium</td>
+</tr>
+</tbody>
+</table>

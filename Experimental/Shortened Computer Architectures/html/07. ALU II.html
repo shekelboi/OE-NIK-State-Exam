@@ -1,0 +1,57 @@
+<h1 id="alu-ii">ALU II</h1>
+<h3 id="bcd-encoding">BCD Encoding</h3>
+<ul>
+<li><strong>BCD (Binary-Coded Decimal)</strong> stores each decimal
+digit (0–9) as a 4-bit binary number.</li>
+<li>Used in financial and commercial systems where decimal precision
+matters.</li>
+<li>Requires special handling in arithmetic to correct results (like BCD
+addition corrections).</li>
+</ul>
+<hr />
+<h3 id="floating-point-basics">Floating-Point Basics</h3>
+<ul>
+<li><p>Represents <strong>real numbers</strong> (including fractions and
+very large/small numbers).</p></li>
+<li><p>Uses three parts:</p>
+<ul>
+<li><strong>Sign bit</strong> (positive/negative)</li>
+<li><strong>Exponent</strong> (scales the number)</li>
+<li><strong>Mantissa (or significand)</strong> (precision bits)</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="ieee-754-standard">IEEE 754 Standard</h3>
+<ul>
+<li><p>Defines formats for floating-point numbers, commonly:</p>
+<ul>
+<li><strong>Single precision:</strong> 32 bits</li>
+<li><strong>Double precision:</strong> 64 bits</li>
+</ul></li>
+<li><p>Specifies how to represent special values:</p>
+<ul>
+<li>Zero, Infinity, NaN (Not a Number)</li>
+<li>Denormalized numbers for very small values</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="rounding-and-exceptions">Rounding and Exceptions</h3>
+<ul>
+<li><p>Rounding is needed because many real numbers can’t be represented
+exactly. Common modes:</p>
+<ul>
+<li>Round to nearest (default)</li>
+<li>Round toward zero</li>
+<li>Round up/down</li>
+</ul></li>
+<li><p>Exceptions: overflow, underflow, divide by zero, invalid
+operation trigger special flags.</p></li>
+</ul>
+<hr />
+<h3 id="floating-point-arithmetic">Floating-Point Arithmetic</h3>
+<ul>
+<li>Operations follow rules for exponent alignment, mantissa
+calculation, normalization, and rounding.</li>
+<li>More complex and slower than integer arithmetic but essential for
+scientific computing.</li>
+</ul>

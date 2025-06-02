@@ -1,0 +1,46 @@
+<h1 id="sequential-instruction-execution">Sequential Instruction
+Execution</h1>
+<h3 id="what-happens-step-by-step">What Happens Step-by-Step?</h3>
+<p>When a CPU runs a program, it <strong>executes instructions
+sequentially</strong> unless told otherwise (like with jumps). The basic
+types are:</p>
+<hr />
+<h3 id="arithmetic-instructions"><strong>Arithmetic
+Instructions</strong></h3>
+<p>These perform math.</p>
+<ul>
+<li><code>ADD R1, R2, R3</code> → <code>R1 = R2 + R3</code></li>
+<li><code>SUB</code>, <code>MUL</code>, <code>DIV</code>, etc.</li>
+</ul>
+<p>They often set special bits called flags in a status register to
+reflect the result (like Zero, Negative, Overflow).</p>
+<hr />
+<h3 id="loadstore-instructions"><strong>Load/Store
+Instructions</strong></h3>
+<p>Because CPUs operate on registers, <strong>you load data from
+memory</strong> into a register, and <strong>store it back</strong> when
+needed.</p>
+<ul>
+<li><code>LDR R1, [R2]</code> → Load from memory address in R2 to
+R1</li>
+<li><code>STR R1, [R2]</code> → Store R1’s value to memory address in
+R2</li>
+</ul>
+<p>These are crucial in <strong>load-store architectures</strong> like
+RISC.</p>
+<hr />
+<h3 id="control-flow-jumps-and-branches"><strong>Control Flow: Jumps and
+Branches</strong></h3>
+<ul>
+<li><p><strong>Unconditional jump</strong> <code>B label</code> → Always
+jumps to <code>label</code></p></li>
+<li><p><strong>Conditional jump</strong> <code>BEQ label</code> → Branch
+if Equal (i.e., Zero flag is set)</p></li>
+</ul>
+<p>Other conditions include:</p>
+<ul>
+<li><code>BNE</code> (not equal)</li>
+<li><code>BLT</code> (less than)</li>
+<li><code>BGT</code> (greater than)</li>
+</ul>
+<p>They use flags set by arithmetic ops.</p>

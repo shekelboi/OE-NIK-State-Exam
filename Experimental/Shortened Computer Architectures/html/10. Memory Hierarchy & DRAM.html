@@ -1,0 +1,94 @@
+<h1 id="memory-hierarchy-dram">Memory Hierarchy &amp; DRAM</h1>
+<h3 id="why-not-use-one-big-fast-memory">Why Not Use One Big Fast
+Memory?</h3>
+<p>Because speed and cost scale differently:</p>
+<ul>
+<li><strong>Fast memory (like SRAM)</strong> is expensive and
+small.</li>
+<li><strong>Large memory (like DRAM)</strong> is slower but
+cheaper.</li>
+</ul>
+<p>So CPUs use a <strong>hierarchy</strong> of memories to balance speed
+and capacity.</p>
+<hr />
+<h3 id="principle-of-locality">Principle of Locality</h3>
+<p>Programs tend to access:</p>
+<ul>
+<li><strong>Temporal locality</strong>: the same data repeatedly in a
+short time.</li>
+<li><strong>Spatial locality</strong>: data close to recently used
+data.</li>
+</ul>
+<p>This behavior allows <strong>caches</strong> to be effective.</p>
+<hr />
+<h3 id="memory-hierarchy-top-bottom">Memory Hierarchy (Top →
+Bottom)</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Level</th>
+<th>Speed</th>
+<th>Size</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Registers</td>
+<td>Very fast</td>
+<td>Tiny</td>
+<td>Very high</td>
+</tr>
+<tr class="even">
+<td>L1 Cache</td>
+<td>Fast</td>
+<td>Small</td>
+<td>High</td>
+</tr>
+<tr class="odd">
+<td>L2/L3 Cache</td>
+<td>Moderate</td>
+<td>Larger</td>
+<td>Medium</td>
+</tr>
+<tr class="even">
+<td>DRAM (Main)</td>
+<td>Slower</td>
+<td>GBs</td>
+<td>Lower</td>
+</tr>
+<tr class="odd">
+<td>Disk/SSD</td>
+<td>Slowest</td>
+<td>TBs</td>
+<td>Cheapest</td>
+</tr>
+</tbody>
+</table>
+<p>Each level <strong>acts as a cache</strong> for the level below
+it.</p>
+<hr />
+<h3 id="dram-basics">DRAM Basics</h3>
+<ul>
+<li><strong>DRAM</strong> (Dynamic RAM) stores data as <strong>charges
+in capacitors</strong>.</li>
+<li>Needs <strong>constant refreshing</strong> (reads and rewrites
+contents every few ms).</li>
+<li>Slower than SRAM (used in caches) but <strong>denser and
+cheaper</strong>.</li>
+</ul>
+<hr />
+<h3 id="memory-width-effects">Memory Width Effects</h3>
+<ul>
+<li><strong>Wider memory buses</strong> (e.g. 64-bit vs 128-bit) can
+transfer more data per cycle.</li>
+<li>Affects how quickly large blocks of data can be read/written.</li>
+</ul>
+<hr />
+<h3 id="interleaving">Interleaving</h3>
+<ul>
+<li>Technique to improve throughput by <strong>splitting memory into
+banks</strong>.</li>
+<li>Allows <strong>parallel access</strong> to different banks, reducing
+wait time.</li>
+</ul>

@@ -1,0 +1,27 @@
+<h1 id="process-level-parallelism">Process-Level Parallelism</h1>
+<h3 id="why-process-level-parallelism">Why Process-Level
+Parallelism?</h3>
+<ul>
+<li>Beyond threads, <strong>process-level parallelism</strong> exploits
+multiple cores or multiple processors running <strong>separate
+processes</strong> simultaneously.</li>
+<li>Helps scale workloads that are heavy or independent.</li>
+</ul>
+<hr />
+<h3 id="motivation-limits">Motivation &amp; Limits</h3>
+<ul>
+<li>Some tasks are better split at the process level (e.g., web servers,
+databases).</li>
+<li>But limits exist due to <strong>Amdahl’s Law</strong> — speedup
+limited by serial parts of code.</li>
+<li>Also affected by <strong>communication overhead</strong> between
+processes.</li>
+</ul>
+<hr />
+<h3 id="shared-vs-distributed-memory">Shared vs Distributed Memory</h3>
+<ul>
+<li><strong>Shared Memory:</strong> Multiple processors share the same
+physical memory (easier communication).</li>
+<li><strong>Distributed Memory:</strong> Each processor has its own
+memory; communication happens via message passing (more scalable).</li>
+</ul>
